@@ -1,0 +1,12 @@
+=10 --will count down from 10
+=1  --counts down in increments of 1
+
+-&1?~10 --exits loop if count down variable is < 0
++&1?~8  --repeats loop if count down variable is >= 0
+~5
+&1-&2
+>&1
+
+='count down finished'
+>$10
+!

@@ -1,0 +1,39 @@
+=7  -- counter (will calculate 10 fibonacci numbers (first 2 are predefined then loop 0->6))
+=1  -- loop decrementer
+=1  -- a
+=1  -- b
+
+-- printing a and b pre-loop (first 2 terms of the sequence)
+>&3
+>&4
+
+-- looping (0->counter-1)
+-&1?~39 -- exit condition
++&1?~36 -- continue condition
+~12
+&1-&2   -- decrement counter
+
+-- a < b: a = sum
+&3-&3
+&3+&36
+~14
+
+-- a >= b: b = sum
+&4-&4
+&4+&36
+~14
+
+-&30?~17    -- if a < b then a = sum
++&30?~22    -- if a >= b then b = sum
+&30-&4
+&30+&3
+=0          -- difference: a - b
+-- assigning the sum to min(a, b) ^
+
+>&36    -- output sum
+&36+&4
+&36+&3
+=0      --sum
+-- adding the 2 numbers ^
+
+!
